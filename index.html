@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Profile Card</title>
+</head>
+<body>
+    
+    <nav class="instructions" data-testid="gameInstructions">
+        <p>Guess the Correct Color!!!</p>
+    </nav>
+
+    <main class="color_game">
+
+        <div class="container">
+            
+            <header class="announcement_display">
+
+                <!-- new game button -->
+                <div class="newGame_control">
+                    <button data-testid="newGameButton">New Game</button>
+                </div>
+
+                <!-- game status and player score -->
+                <div class="status_score">
+
+                    <span class="status" data-testid="gameStatus">Status: </span>
+                    <span class="scoreboard" data-testid="score">Score: </span>
+                    
+                </div>
+
+            </header>
+
+            <!-- color display -->
+            <section class="target_color" data-testid="colorBox"></section>
+
+            <!-- Answer options -->
+            <section class="button_container">
+                <button type="button" data-testid="colorOption" class="option_button option_one"></button>
+                <button type="button" data-testid="colorOption" class="option_button option_two"></button>
+                <button type="button" data-testid="colorOption" class="option_button option_three"></button>
+                <button type="button" data-testid="colorOption" class="option_button option_four"></button>
+                <button type="button" data-testid="colorOption" class="option_button option_five"></button>
+                <button type="button" data-testid="colorOption" class="option_button option_six"></button>
+            </section>
+        </div>
+    </main>
+
+    <script src="./script/script.js">
+       
+    </script>
+</body>
+</html>
