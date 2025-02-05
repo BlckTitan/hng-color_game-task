@@ -83,7 +83,7 @@ body{
     grid-gap: .5rem;
 }
 .option_button{
-    width: 6rem;
+    width: 9rem;
     height: 5rem;
     border: 0px;
     cursor: pointer;
@@ -97,7 +97,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
     }
     .option_button{
-        width: 8rem;
+        width: 11rem;
     }
 }
 
