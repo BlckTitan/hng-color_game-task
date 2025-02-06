@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link 
+    href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Chewy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" 
+    rel="stylesheet"
+>
+    <title>Color Game</title>
 </head>
 <body>
     
     <nav class="instructions" data-testid="gameInstructions">
         <p>Guess the Correct Color!!!</p>
+        <span class="instruction_text">Click New Game to Begin!!!</span>
     </nav>
 
     <main class="color_game">
@@ -20,14 +27,14 @@
 
                 <!-- new game button -->
                 <div class="newGame_control">
-                    <button data-testid="newGameButton">New Game</button>
+                    <button class="new_game" data-testid="newGameButton">New Game</button>
                 </div>
 
                 <!-- game status and player score -->
                 <div class="status_score">
 
-                    <span class="status" data-testid="gameStatus">Status: </span>
-                    <span class="scoreboard" data-testid="score">Score: </span>
+                    <span class="status" data-testid="gameStatus">Status </span>
+                    <span class="scoreboard" data-testid="score">Score </span>
                     
                 </div>
 
