@@ -30,25 +30,39 @@ const getSelectedColor = () =>{
     // get the user selected color
    const selectedColor = document.getElementsByClassName('option_button')
     // get the status of the user choice
-   const status = document.getElementsByClassName('status')[0]
+    const status = document.getElementsByClassName('status')[0]
+    // remove animations
+    status.classList.remove('correct_pick', 'wrong_pick')
 
+    // Prevent duplicate event listeners by resetting elements
+    Array.from(selectedColor).forEach((element) => {
+        element.replaceWith(element.cloneNode(true)); // Removes all event listeners
+    });
+    
     //check if the user selected the correct color    
    Array.from(selectedColor).forEach((element) => {
     element.addEventListener('click', function checkChoiceStatus(e){
         const target_color = document.getElementsByClassName('target_color')[0].style.backgroundColor
-        const selected_color = e.target.style.backgroundColor
-        
+        const selected_color = e.target.style.backgroundColor;
+
+        // remove animations
+        status.classList.remove('correct_pick', 'wrong_pick');
+
         if(selected_color === target_color){
             status.innerHTML = 'Correct';
+            status.classList.add('correct_pick');
             status.style.backgroundColor = 'green';
-            scoreboard(1)
-            displayColorOptions()
+            setTimeout(() => status.classList.remove("correct_pick"), 100);
+            scoreboard(1);
         }else{
             status.innerHTML = 'Wrong';
+            status.classList.add('wrong_pick');
             status.style.backgroundColor = 'red';
+            setTimeout(() => status.classList.remove("wrong_pick"), 100);
             scoreboard(0)
-            displayColorOptions()
         }
+        
+        displayColorOptions()
     })
    })
 }

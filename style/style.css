@@ -105,6 +105,12 @@ body{
     border: 0px;
     cursor: pointer;
 }
+.correct_pick{
+    animation: correct_pick .1s ease-in-out;
+}
+.wrong_pick{
+    animation: wrong_pick .1s ease-in-out;
+}
 /*m devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .button_container{
@@ -120,8 +126,32 @@ body{
         margin-right: 2rem;
     }
 }
+@keyframes correct_pick {
+    0% {
+        background-color: #4CAF50;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #66FF66;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: green;
+        transform: scale(1);
+    }
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    
+@keyframes wrong_pick {
+    0% {
+        background-color: #c75454;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #eb4040;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: #fa0000;
+        transform: scale(1);
+    }
 }
